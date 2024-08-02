@@ -1,4 +1,7 @@
 //! Bindings for the `monaco.languages` namespace.
+#[cfg(feature = "json")]
+pub mod json;
+
 use super::{
     editor::ITextModel,
     CancellationToken,
