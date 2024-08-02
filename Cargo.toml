@@ -20,6 +20,7 @@ crate-type = ["cdylib", "rlib"]
 [features]
 default = ["api", "workers"]
 api = []
+json = []
 workers = []
 yew-components = ["api", "yew"]
 
@@ -27,7 +28,7 @@ yew-components = ["api", "yew"]
 [dependencies]
 js-sys = "0.3"
 paste = "1.0"
-wasm-bindgen = "0.2"
+wasm-bindgen = "0.2.89"
 yew = { version = "0.21", features = ["csr"], optional = true }
 
 [dependencies.web-sys]

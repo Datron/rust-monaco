@@ -28,6 +28,14 @@ macro_rules! object_set {
     };
 }
 
+macro_rules! object_set_optional {
+    ($obj:ident.$key:ident = $value:expr) => {
+        if let Some(val) = $value {
+            object_set!(try $obj.$key = val).expect("setting key on object must not fail");
+        }
+    }
+}
+
 pub mod exports {
     pub use wasm_bindgen::{
         convert::{FromWasmAbi, IntoWasmAbi, OptionFromWasmAbi, OptionIntoWasmAbi},
