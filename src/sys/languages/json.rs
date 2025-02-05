@@ -91,7 +91,7 @@ extern "C" {
     pub type LanguageServiceDefaults;
 
     #[derive(Debug)]
-    #[wasm_bindgen(js_name = "jsonDefaults")]
+    #[wasm_bindgen(js_name = "jsonDefaults", thread_local_v2)]
     pub static JSON_DEFAULTS: LanguageServiceDefaults;
 
     #[wasm_bindgen(method, js_class = "LanguageServiceDefaults", js_name = "diagnosticsOptions", getter = diagnosticsOptions)]
